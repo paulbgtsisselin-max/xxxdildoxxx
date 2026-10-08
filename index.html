@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Perché — Loisirs pour chats d'appartement</title>
+  <meta name="description" content="Herbe à chat, arbres à chat, jouets, fontaines et gamelles : tout pour occuper votre chat d'appartement.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">Livraison offerte dès 39 € · Retours gratuits sous 30 jours</div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#accueil" class="logo" data-tab="accueil">
+        <span class="logo-icon">🐾</span>
+        <span>Chat Perché</span>
+      </a>
+      <button class="cart-btn" id="cartBtn" aria-label="Ouvrir le panier">
+        🧺 <span>Panier</span> <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+    <nav class="tabs container" id="tabs" role="tablist">
+      <button class="tab active" data-tab="accueil" role="tab">Accueil</button>
+      <button class="tab" data-tab="herbe" role="tab">🌿 Herbe à chat</button>
+      <button class="tab" data-tab="arbres" role="tab">🌳 Arbres à chat</button>
+      <button class="tab" data-tab="jouets" role="tab">🧶 Jouets</button>
+      <button class="tab" data-tab="fontaines" role="tab">💧 Fontaines &amp; gamelles</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Accueil -->
+    <section class="panel active" id="panel-accueil">
+      <div class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">Pour les chats d'intérieur</p>
+          <h1>Un appartement, mille terrains de jeu.</h1>
+          <p>Un chat qui vit en intérieur a besoin de grimper, griffer, chasser et mâchouiller un peu de verdure.
+            On a sélectionné des objets simples et naturels pour lui offrir tout ça, sans quitter votre salon.</p>
+          <button class="btn" data-tab="herbe">Découvrir l'herbe à chat</button>
+        </div>
+        <div class="hero-art" aria-hidden="true">🐈</div>
+      </div>
+
+      <div class="cat-grid">
+        <button class="cat-card" data-tab="herbe">
+          <span class="cat-emoji">🌿</span>
+          <h3>Herbe à chat</h3>
+          <p>Graines, cataire séchée, matatabi, valériane…</p>
+        </button>
+        <button class="cat-card" data-tab="arbres">
+          <span class="cat-emoji">🌳</span>
+          <h3>Arbres à chat</h3>
+          <p>Compacts, XXL, muraux, sol-plafond, griffoirs.</p>
+        </button>
+        <button class="cat-card" data-tab="jouets">
+          <span class="cat-emoji">🧶</span>
+          <h3>Jouets</h3>
+          <p>Cannes à plumes, circuits, tapis de fouille…</p>
+        </button>
+        <button class="cat-card" data-tab="fontaines">
+          <span class="cat-emoji">💧</span>
+          <h3>Fontaines &amp; gamelles</h3>
+          <p>Pour boire plus et manger plus sereinement.</p>
+        </button>
+      </div>
+
+      <div class="perks">
+        <div><strong>🚚 Livraison suivie</strong><span>7 à 12 jours ouvrés, offerte dès 39 €</span></div>
+        <div><strong>↩️ 30 jours</strong><span>pour changer d'avis</span></div>
+        <div><strong>🔒 Paiement sécurisé</strong><span>CB, PayPal</span></div>
+        <div><strong>🌱 Matières naturelles</strong><span>sisal, bois, céramique, coton</span></div>
+      </div>
+    </section>
+
+    <!-- Catégories (remplies par script.js) -->
+    <section class="panel" id="panel-herbe">
+      <div class="panel-head">
+        <h2>🌿 Herbe à chat</h2>
+        <p>Deux familles bien différentes : l'<strong>herbe à mâcher</strong> (avoine, orge, blé) qui aide à la digestion
+          et à éliminer les boules de poils, et les <strong>plantes « euphorisantes »</strong> (cataire, matatabi, valériane,
+          chèvrefeuille de Tartarie) qui excitent ou apaisent le chat pendant 5 à 15 minutes. Environ un chat sur trois
+          ne réagit pas à la cataire : le matatabi ou le chèvrefeuille fonctionnent alors souvent mieux.</p>
+      </div>
+      <div class="grid" data-category="herbe"></div>
+    </section>
+
+    <section class="panel" id="panel-arbres">
+      <div class="panel-head">
+        <h2>🌳 Arbres à chat</h2>
+        <p>Grimper et observer d'en haut rassure le chat. Choisissez selon la place disponible : griffoir colonne pour
+          les petits espaces, arbre XXL pour plusieurs chats, ou étagères murales pour gagner de la hauteur sans prendre de sol.</p>
+      </div>
+      <div class="grid" data-category="arbres"></div>
+    </section>
+
+    <section class="panel" id="panel-jouets">
+      <div class="panel-head">
+        <h2>🧶 Jouets</h2>
+        <p>10 à 15 minutes de jeu de chasse, deux fois par jour, suffisent à dépenser l'énergie d'un chat d'intérieur.
+          Alternez les jouets pour garder l'effet de nouveauté.</p>
+      </div>
+      <div class="grid" data-category="jouets"></div>
+    </section>
+
+    <section class="panel" id="panel-fontaines">
+      <div class="panel-head">
+        <h2>💧 Fontaines &amp; gamelles</h2>
+        <p>Les chats boivent davantage une eau qui bouge : une fontaine aide à prévenir les problèmes urinaires.
+          Côté gamelles, privilégiez la céramique ou l'inox, plus hygiéniques que le plastique.</p>
+      </div>
+      <div class="grid" data-category="fontaines"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="logo"><span class="logo-icon">🐾</span> Chat Perché</p>
+        <p class="muted">Objets de loisir pour chats d'appartement.</p>
+      </div>
+      <div class="muted small">
+        <p>Livraison 7 à 12 jours ouvrés · Expédition depuis nos entrepôts partenaires</p>
+        <p>Contact : bonjour@chat-perche.fr</p>
+        <p>CGV · Mentions légales · Politique de retour</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Panier -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart" id="cart" aria-label="Panier">
+    <div class="cart-head">
+      <h2>Votre panier</h2>
+      <button class="icon-btn" id="cartClose" aria-label="Fermer">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <p class="shipping-note" id="shippingNote"></p>
+      <div class="cart-total"><span>Total</span><strong id="cartTotal">0,00 €</strong></div>
+      <button class="btn btn-block" id="checkoutBtn">Commander</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
