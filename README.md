@@ -14,3 +14,5 @@ Site statique simple (HTML / CSS / JS, sans dépendance). Ouvrez `index.html` da
   Ajoutez `image: "https://..."` (photo fournisseur) pour remplacer l'emoji, et `supplier` pour garder le lien fournisseur.
 - Couleurs dans `style.css` (variables `:root`).
 - Le bouton « Commander » est à brancher sur un vrai paiement (Stripe, Shopify, WooCommerce…).
+- Photo d'accueil : `images/chat-accueil.jpg` (« Chelsea », photo de Stefan van der Walt, licence CC0 / domaine public,
+  issue des données d'exemple de scikit-image). Remplacez le fichier par votre propre photo pour la changer.
