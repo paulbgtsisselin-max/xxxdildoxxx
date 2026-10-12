@@ -10,8 +10,10 @@ Site statique simple (HTML / CSS / JS, sans dépendance). Ouvrez `index.html` da
 - **Fontaines & gamelles** : fontaines plastique / céramique / inox, filtres, gamelles surélevées, anti-glouton, distributeur
 
 ## Personnaliser
-- Les produits sont dans `products.js` : nom, description, prix, badge.
-  Ajoutez `image: "https://..."` (photo fournisseur) pour remplacer l'emoji, et `supplier` pour garder le lien fournisseur.
+- Les produits sont dans `products.js` : nom, description, prix, badge, `supplier` (lien de l'article fournisseur)
+  et `image` (photo). Sans `image`, la carte affiche l'emoji du produit.
+- Photos produits : `images/produits/<id>.jpg`, photos fournisseurs AliExpress (800 px) de l'article indiqué dans `supplier`.
+  Si vous changez de fournisseur pour un produit, changez aussi sa photo.
 - Couleurs dans `style.css` (variables `:root`).
 - Le bouton « Commander » est à brancher sur un vrai paiement (Stripe, Shopify, WooCommerce…).
 - Photo d'accueil : `images/chat-accueil.jpg` (« Chelsea », photo de Stefan van der Walt, licence CC0 / domaine public,
