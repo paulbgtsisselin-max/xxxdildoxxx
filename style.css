@@ -214,12 +214,13 @@ main.container { padding-top: 28px; padding-bottom: 56px; }
 
 .card-media {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   display: grid;
   place-items: center;
   font-size: 4rem;
+  overflow: hidden;
 }
-.card-media img { width: 100%; height: 100%; object-fit: cover; }
+.card-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 
 .cat-herbe { background: #e6eedd; }
 .cat-arbres { background: #efe4d3; }
@@ -302,7 +303,9 @@ main.container { padding-top: 28px; padding-bottom: 56px; }
 .cart-thumb {
   width: 56px; height: 56px; border-radius: 12px;
   display: grid; place-items: center; font-size: 1.7rem; flex-shrink: 0;
+  overflow: hidden;
 }
+.cart-thumb img { width: 100%; height: 100%; object-fit: cover; }
 .cart-info { flex: 1; min-width: 0; }
 .cart-info p { margin: 0; }
 .cart-name { font-weight: 600; font-size: 0.92rem; }

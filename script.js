@@ -76,7 +76,7 @@ function renderCart() {
   $("#cartItems").innerHTML = entries.length
     ? entries.map(({ p, qty }) => `
       <div class="cart-item">
-        <div class="cart-thumb cat-${p.category}">${p.emoji}</div>
+        <div class="cart-thumb cat-${p.category}">${p.image ? `<img src="${p.image}" alt="">` : p.emoji}</div>
         <div class="cart-info">
           <p class="cart-name">${p.name}</p>
           <p class="muted small">${euro(p.price)}</p>
